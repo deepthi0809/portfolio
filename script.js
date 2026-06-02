@@ -64,6 +64,7 @@ function setCertificateImage(imagePath, title) {
 
     modalImage.classList.remove("loaded");
     modalImage.alt = `${title} certificate preview`;
+
     if (isPdf) {
         modalImage.src = "";
         modalImageFallback.textContent = "This certificate is available as a PDF. Use the button below to open it.";
@@ -89,18 +90,27 @@ function formatCredentialDate(dateValue) {
     });
 }
 
+function cleanCredentialText(value) {
+    if (!value) return "";
+
+    return String(value)
+        .replaceAll("SaÃ¯d", "Said")
+        .replaceAll("Â·", "-")
+        .replaceAll("  ", " ");
+}
+
 function applyCertificateData(data) {
-    const issuer = typeof data.issuer === "object" ? data.issuer?.name : data.issuer;
-    const issued = formatCredentialDate(data.validFrom);
+    const issuer = cleanCredentialText(typeof data.issuer === "object" ? data.issuer?.name : data.issuer);
+    const issued = formatCredentialDate(data.validFrom || data.completionDate);
     const validUntil = formatCredentialDate(data.validUntil);
     const dates = [issued && `Issued ${issued}`, validUntil && `Valid until ${validUntil}`]
         .filter(Boolean)
-        .join(" · ");
-    const details = data.description || data.credentialSubject?.achievement?.description;
-    const imagePath = data.image?.id;
+        .join(" - ");
+    const details = cleanCredentialText(data.description || data.credentialSubject?.achievement?.description);
+    const imagePath = typeof data.image === "object" ? data.image?.id : data.image;
 
-    modalTitle.textContent = data.name || modalTitle.textContent;
-    modalIssuer.textContent = [issuer, dates].filter(Boolean).join(" · ");
+    modalTitle.textContent = cleanCredentialText(data.name) || modalTitle.textContent;
+    modalIssuer.textContent = [issuer, dates].filter(Boolean).join(" - ");
     modalDetails.textContent = details || modalDetails.textContent;
 
     if (imagePath) {
@@ -116,15 +126,17 @@ function applyCertificateData(data) {
 async function openCertificate(card) {
     const imagePath = card.dataset.image;
     const certificateLink = card.dataset.certificateLink;
+    const isPdfLink = certificateLink?.toLowerCase().endsWith(".pdf");
+    const previewPath = imagePath || (isPdfLink ? certificateLink : "");
 
     modalTitle.textContent = card.dataset.title;
     modalStatus.textContent = card.dataset.status;
     modalIssuer.textContent = card.dataset.issuer;
     modalDetails.textContent = card.dataset.details;
-    setCertificateImage(imagePath, card.dataset.title);
+    setCertificateImage(previewPath, card.dataset.title);
 
     modalCertificateLink.href = certificateLink || imagePath || "assets/resume.pdf";
-    modalCertificateLink.textContent = certificateLink?.toLowerCase().endsWith(".pdf")
+    modalCertificateLink.textContent = isPdfLink
         ? "Open Certificate PDF"
         : certificateLink
             ? "Open Certificate Link"
@@ -141,9 +153,11 @@ async function openCertificate(card) {
         const data = await response.json();
         applyCertificateData(data);
     } catch (error) {
+        modalCertificateLink.href = certificateLink || card.dataset.json || imagePath || "assets/resume.pdf";
+        modalCertificateLink.textContent = certificateLink ? "Open Certificate Link" : "Open Certificate JSON";
         modalImageFallback.textContent = imagePath
             ? `Add the local preview image here: ${imagePath}. JSON details may require opening this site through a local server: ${card.dataset.json}`
-            : `Certificate JSON could not be loaded: ${card.dataset.json}`;
+            : `Certificate JSON could not be loaded directly. Open it here: ${card.dataset.json}`;
     }
 }
 
