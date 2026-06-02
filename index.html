@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepthi Shivakumar | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="site-nav">
+        <a class="brand" href="#home">Deepthi Shivakumar</a>
+        <button class="menu-toggle" type="button" aria-label="Open navigation" aria-expanded="false">Menu</button>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#certificates">Certificates</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <header id="home" class="hero">
+            <div class="profile-card">
+                <img src="assets/profile.jpg" alt="Deepthi Shivakumar profile photo">
+                <div>
+                    <strong>Deepthi Shivakumar</strong>
+                    <span>Mysore, Karnataka</span>
+                </div>
+            </div>
+            <div class="hero-copy">
+                <p class="eyebrow">Computer Science Engineering Student</p>
+                <h1>Hi, I'm Deepthi Shivakumar</h1>
+                <p>
+                    I build backend-first web and mobile applications with Python, Java,
+                    Kotlin, SQL, REST APIs, Firebase, Node.js, and MySQL.
+                </p>
+                <div class="hero-actions">
+                    <a class="button primary" href="assets/resume.pdf" download>Download Resume</a>
+                    <a class="button secondary" href="#projects">View Projects</a>
+                </div>
+            </div>
+        </header>
+
+        <section id="about" class="section reveal">
+            <div class="section-heading">
+                <p class="eyebrow">Profile</p>
+                <h2>About Me</h2>
+            </div>
+            <p class="lead">
+                Computer Science Engineering student with strong foundations in Data
+                Structures, Algorithms, Object-Oriented Programming, and Backend
+                Development. Experienced in designing REST APIs, relational databases,
+                and scalable backend logic for web and mobile applications.
+            </p>
+            <div class="stats-grid">
+                <article>
+                    <span>2026 Graduate</span>
+                    <p>AI focus area</p>
+                </article>
+                <article>
+                    <span>5+</span>
+                    <p>Highlighted certifications, simulations, and awards</p>
+                </article>
+                <article>
+                    <span>3</span>
+                    <p>Core application projects across safety, health, and AI</p>
+                </article>
+            </div>
+        </section>
+
+        <section id="skills" class="section reveal">
+            <div class="section-heading">
+                <p class="eyebrow">Toolkit</p>
+                <h2>Skills</h2>
+            </div>
+            <div class="skill-tabs" role="tablist" aria-label="Skill categories">
+                <button class="tab active" type="button" data-filter="all">All</button>
+                <button class="tab" type="button" data-filter="language">Languages</button>
+                <button class="tab" type="button" data-filter="backend">Backend</button>
+                <button class="tab" type="button" data-filter="tools">Tools</button>
+                <button class="tab" type="button" data-filter="ai">AI</button>
+            </div>
+            <div class="skill-container">
+                <span data-category="language">Python</span>
+                <span data-category="language">Java</span>
+                <span data-category="language">Kotlin</span>
+                <span data-category="language">JavaScript</span>
+                <span data-category="backend">REST APIs</span>
+                <span data-category="backend">Node.js</span>
+                <span data-category="backend">MySQL</span>
+                <span data-category="backend">Firebase</span>
+                <span data-category="tools">Git</span>
+                <span data-category="tools">GitHub</span>
+                <span data-category="tools">VS Code</span>
+                <span data-category="tools">Linux</span>
+                <span data-category="ai">AI Analytics</span>
+                <span data-category="ai">Predictive Analysis</span>
+                <span data-category="ai">Microsoft Azure AI</span>
+            </div>
+        </section>
+
+        <section id="projects" class="section reveal">
+            <div class="section-heading">
+                <p class="eyebrow">Work</p>
+                <h2>Projects</h2>
+            </div>
+            <div class="project-grid">
+                <article class="project-card">
+                    <div class="card-top">
+                        <h3>KAVACH</h3>
+                        <span>Android</span>
+                    </div>
+                    <p>
+                        Women safety mobile application with SOS alerts, live location
+                        tracking, guardian emergency pin alerts, offline SMS support,
+                        and safe-place reviews.
+                    </p>
+                    <button class="details-toggle" type="button">Show impact</button>
+                    <ul class="project-details">
+                        <li>Integrated Firebase authentication, real-time sync, notifications, and secure storage.</li>
+                        <li>Designed fast-response emergency workflows for low-network conditions.</li>
+                    </ul>
+                </article>
+
+                <article class="project-card">
+                    <div class="card-top">
+                        <h3>Healthify</h3>
+                        <span>Full Stack</span>
+                    </div>
+                    <p>
+                        Food recommendation system that analyzes user inputs and
+                        suggests personalized healthy food plans.
+                    </p>
+                    <button class="details-toggle" type="button">Show impact</button>
+                    <ul class="project-details">
+                        <li>Created backend APIs for recommendation logic, chatbot interactions, and profile processing.</li>
+                        <li>Designed relational tables for health metrics and recommendation history.</li>
+                    </ul>
+                </article>
+
+                <article class="project-card">
+                    <div class="card-top">
+                        <h3>Python Chess AI</h3>
+                        <span>AI Logic</span>
+                    </div>
+                    <p>
+                        Chess project using Python with game logic, move validation,
+                        and intelligent move generation.
+                    </p>
+                    <button class="details-toggle" type="button">Show impact</button>
+                    <ul class="project-details">
+                        <li>Practiced algorithmic thinking, state handling, and strategy evaluation.</li>
+                        <li>Built as part of academic and problem-solving software work.</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section id="experience" class="section reveal">
+            <div class="section-heading">
+                <p class="eyebrow">Experience</p>
+                <h2>Learning and Mentorship</h2>
+            </div>
+            <div class="timeline">
+                <article>
+                    <span>2026</span>
+                    <h3>Commvault Pratidhi 2025 Mentorship Program</h3>
+                    <p>
+                        Learned SDLC, system design, and cloud fundamentals while
+                        gaining exposure to enterprise-scale software practices.
+                    </p>
+                </article>
+                <article>
+                    <span>2026</span>
+                    <h3>AI/ML Intern - Learnfin</h3>
+                    <p>
+                        Built supervised and unsupervised ML models with Python, data
+                        preprocessing, feature engineering, and model evaluation.
+                    </p>
+                </article>
+                <article>
+                    <span>May 30, 2026</span>
+                    <h3>AI and Digital Transformation in Government Certificate</h3>
+                    <p>
+                        Earned the Oxford programme certificate covering AI governance,
+                        responsible AI, data governance, cybersecurity, and large-scale
+                        digital transformation frameworks.
+                    </p>
+                </article>
+                <article>
+                    <span>May 3, 2026</span>
+                    <h3>Tata Group Data Analytics Job Simulation</h3>
+                    <p>
+                        Completed AI-powered analytics, EDA, delinquency risk framing,
+                        and AI-driven collections strategy work through Forage.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section id="certificates" class="section reveal">
+            <div class="section-heading">
+                <p class="eyebrow">Credentials</p>
+                <h2>Certificates and Awards</h2>
+            </div>
+            <div class="certificate-grid">
+                <button class="certificate-card featured-certificate" type="button"
+                    data-title="AI and Digital Transformation in Government"
+                    data-issuer="Oxford Programme"
+                    data-status="Featured Learning"
+                    data-certificate-link="assets/certificates/oxford.pdf"
+                    data-details="Developed expertise in AI governance, data governance, cybersecurity, and digital transformation frameworks. Applied responsible AI, digital strategy, stakeholder management, and technology adoption principles while exploring AI, data-driven decision-making, cyber-resilience, and large-scale digital transformation initiatives.">
+                    <span>Featured Learning</span>
+                    <h3>AI and Digital Transformation in Government</h3>
+                    <p>AI governance, responsible AI, cyber-resilience, data strategy, and digital transformation.</p>
+                </button>
+                <button class="certificate-card" type="button"
+                    data-title="Microsoft Azure Course - Building AI Solutions"
+                    data-issuer="Microsoft Azure"
+                    data-status="Ongoing"
+                    data-details="Learning Azure AI services, cloud deployment models, cognitive services, scalable deployment strategies, and AI solution architecture.">
+                    <span>Ongoing</span>
+                    <h3>Microsoft Azure AI Solutions</h3>
+                    <p>Cloud AI, cognitive services, and solution architecture.</p>
+                </button>
+                <button class="certificate-card" type="button"
+                    data-title="Tata GenAI Powered Data Analytics Job Simulation"
+                    data-issuer="Tata by Forage"
+                    data-status="Completed"
+                    data-details="Completed practical tasks in exploratory data analysis, delinquency prediction using AI, and AI-driven collections strategy implementation.">
+                    <span>Completed</span>
+                    <h3>Tata GenAI Data Analytics</h3>
+                    <p>EDA, predictive modeling, and collections strategy.</p>
+                </button>
+                <button class="certificate-card" type="button"
+                    data-title="Gemini Certified Student"
+                    data-issuer="Google"
+                    data-status="Certified"
+                    data-json="assets/certificates/gemini-certified-student.json"
+                    data-image="assets/certificates/gemini-certified-student.jpg"
+                    data-details="Demonstrated proficiency with Google AI tools, prompt engineering, generative AI workflows, and productivity applications.">
+                    <span>Certified</span>
+                    <h3>Gemini Certified Student</h3>
+                    <p>Prompt engineering and Google AI workflows.</p>
+                </button>
+                <button class="certificate-card" type="button"
+                    data-title="Commvault Pratidhi 2025 - Gold Award"
+                    data-issuer="Commvault"
+                    data-status="Gold Award"
+                    data-details="Recognized for outstanding technical performance and problem-solving excellence in a competitive mentorship environment.">
+                    <span>Gold Award</span>
+                    <h3>Commvault Pratidhi 2025</h3>
+                    <p>Technical performance and problem-solving excellence.</p>
+                </button>
+                <button class="certificate-card" type="button"
+                    data-title="AIML Internship Certification"
+                    data-issuer="Learnfin - AICTE Approved"
+                    data-status="Completed"
+                    data-details="Completed hands-on machine learning training with model building, preprocessing, supervised learning, evaluation techniques, and real-world AI applications.">
+                    <span>AICTE Approved</span>
+                    <h3>AIML Internship Certification</h3>
+                    <p>Machine learning concepts and model evaluation.</p>
+                </button>
+            </div>
+        </section>
+
+        <section id="contact" class="section contact-section reveal">
+            <div class="section-heading">
+                <p class="eyebrow">Contact</p>
+                <h2>Let's Connect</h2>
+            </div>
+            <div class="contact-grid">
+                <a href="mailto:deepthisr.me@gmail.com">Email: deepthisr.me@gmail.com</a>
+                <a href="tel:+919353560899">Phone: +91 9353560899</a>
+                <a href="https://github.com/deepthi0809" target="_blank" rel="noreferrer">GitHub: deepthi0809</a>
+                <a href="https://www.linkedin.com/in/deepthi-shivkumar-797431258" target="_blank" rel="noreferrer">LinkedIn: Deepthi Shivakumar</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Deepthi Shivakumar. Built as an interactive profile.</p>
+    </footer>
+
+    <div class="modal" id="certificateModal" aria-hidden="true">
+        <div class="modal-panel" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+            <button class="modal-close" type="button" aria-label="Close certificate details">&times;</button>
+            <p class="eyebrow" id="modalStatus"></p>
+            <h2 id="modalTitle"></h2>
+            <p class="issuer" id="modalIssuer"></p>
+            <div class="certificate-preview">
+                <img id="modalImage" src="" alt="">
+                <p id="modalImageFallback"></p>
+            </div>
+            <p id="modalDetails"></p>
+            <div class="modal-actions">
+                <a class="button primary" id="modalCertificateLink" href="assets/resume.pdf" target="_blank" rel="noreferrer">Open Certificate</a>
+                <a class="button secondary" href="assets/resume.pdf" target="_blank" rel="noreferrer">View in Resume</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

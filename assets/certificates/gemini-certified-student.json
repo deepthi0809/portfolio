@@ -1,0 +1,55 @@
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://purl.imsglobal.org/spec/ob/v3p0/context-3.0.3.json"
+  ],
+  "type": [
+    "VerifiableCredential",
+    "OpenBadgeCredential"
+  ],
+  "id": "https://www.credential.net/f1b87404-545a-41b6-8e27-77ab2d7c4b36",
+  "name": "Gemini Certified University Student",
+  "description": "A Google-certified Gemini University student can articulate and demonstrate fundamental knowledge of generative AI concepts and Gemini's core features and capabilities in an educational context.Individuals who have achieved this certification can demonstrate their status with their personalized certificate and badge. This certification is valid for 3 years.",
+  "image": {
+    "id": "https://pdf.ms.credential.net/v2/certificate/image?env=production&credential=h0btl9va&variant=medium",
+    "type": "Image"
+  },
+  "issuer": {
+    "type": "Profile",
+    "id": "did:web:api.accredible.com:v1:verifiable_credential:organizations:17181",
+    "name": "Google for Education",
+    "url": "https://edu.google.com/"
+  },
+  "validFrom": "2026-02-09T00:00:00Z",
+  "validUntil": "2029-02-09T00:00:00Z",
+  "credentialSubject": {
+    "type": "AchievementSubject",
+    "identifier": [
+      {
+        "type": "IdentityObject",
+        "hashed": true,
+        "identityHash": "sha256$16b96a88779d460719823c0eb5402a16983845d27793cb6f310ede5ede92782b",
+        "identityType": "emailAddress",
+        "salt": "40769a2c26ba1c58d5eb702b1ef9a679"
+      }
+    ],
+    "achievement": {
+      "id": "https://www.credential.net/group/742429",
+      "type": "Achievement",
+      "achievementType": "Achievement",
+      "name": "Gemini Certified University Student",
+      "description": "A Google-certified Gemini University student can articulate and demonstrate fundamental knowledge of generative AI concepts and Gemini's core features and capabilities in an educational context.Individuals who have achieved this certification can demonstrate their status with their personalized certificate and badge. This certification is valid for 3 years.",
+      "criteria": {
+        "narrative": "https://edu.google.com/intl/ALL_us/learning-center/certifications/"
+      }
+    }
+  },
+  "proof": {
+    "type": "DataIntegrityProof",
+    "cryptosuite": "eddsa-rdfc-2022",
+    "created": "2026-05-30T08:19:08Z",
+    "verificationMethod": "did:web:api.accredible.com:v1:verifiable_credential:organizations:17181#ad237a70-dc11-11f0-83da-739ba36dc372",
+    "proofPurpose": "assertionMethod",
+    "proofValue": "z2n8i2eb514X8oh9bAwKPr47CuhrSTXKr8Uq2Lowh1QhxYzwf9JPHG1ZZQ4EeGVBaHxwZKrWwd8787H7jdNNgwybs"
+  }
+}
